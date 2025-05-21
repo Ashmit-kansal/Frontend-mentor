@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Product preview card component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+      <picture>
+        <source srcset="./images/image-product-desktop.jpg" media="(min-width: 551px)">
+        <img src="./images/image-product-mobile.jpg" alt="Product Image" class="product-image">
+      </picture>
+      <div class="card-content">
+        <div class="product-info">
+          <p class="product-category">Perfume</p>
+          <h1 class="product-name">Gabrielle Essence Eau De Parfum</h1>
+          <p class="product-description">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+        </div>
+        <div class="price-info">
+          <p class="discount-price">₹12,500</p>
+          <p class="price">₹25,000</p>
+        </div>
+        <button class="btn">
+          <img src="./images/icon-cart.svg" alt="cart-icon" class="cart-icon" aria-hidden="true">
+          Add to cart
+        </button>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
