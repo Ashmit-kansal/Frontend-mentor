@@ -12,7 +12,7 @@ function App() {
         points to ensure that your project is successful
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 max-w-[1090px] mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-10 max-w-[1090px] mx-auto">
         <section className="rounded-lg shadow-lg p-8 border-t-4 border-t-cyan sm:col-span-2 max-w-xs mx-auto lg:col-span-1 lg:row-span-2 max-h-64 my-auto">
           <h2 className="text-preset-3 text-grey-500">Supervisor</h2>
           <p className="text-preset-5 text-grey-400 my-2">
