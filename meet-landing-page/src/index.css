@@ -1,1 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --color-cyan-600: #4d96a9; /* hsl(192, 37%, 48%) */
+  --color-cyan-300: #8fe3f9; /* hsl(192, 90%, 77%) */
+
+  /* Purple */
+  --color-purple-600: #855fb1; /* hsl(268, 34%, 53%) */
+  --color-purple-300: #d9b8ff; /* hsl(268, 100%, 86%) */
+
+  /* Slate */
+  --color-slate-900: #28283d; /* hsl(240, 21%, 20%) */
+  --color-slate-600: #87879d; /* hsl(240, 10%, 57%) */
+  --color-slate-300: #d1d1df; /* hsl(240, 18%, 85%) */
+
+  /* White */
+  --color-white: #fafafa; /* hsl(0, 0%, 98%) */
+
+  --font-redhat: "Red Hat Display", sans-serif;
+}
