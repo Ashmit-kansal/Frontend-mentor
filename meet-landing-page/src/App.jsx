@@ -15,7 +15,7 @@ function App() {
     <>
       <img src={logoImg} alt="Logo" className="mx-auto my-12" />
       {/* header Section */}
-      <header className="overflow-hidden text-center relative font-redhat font-black text-[40px]/[1.1] tracking-normal lg:flex lg:gap-8">
+      <header className="overflow-hidden text-center relative font-redhat font-black text-[40px]/[1.1] tracking-normal lg:flex lg:gap-8 lg:items-center">
         <img
           src={heroImage}
           alt="Hero"
