@@ -1,14 +1,17 @@
 import illustration from './assets/images/illustration-sign-up-mobile.svg';
+import illustrationDesktop from './assets/images/illustration-sign-up-desktop.svg';
 import iconList from './assets/images/icon-list.svg';
+
 
 function App() {
 
   return (
     <>
-      <main className='bg-blue-700'>
-        <div className='bg-white'>
-        <div >
-          <img className='w-full' src={illustration} alt="Logo" />
+      <main className='bg-blue-700 h-screen md:flex items-center justify-center'>
+        <div className='bg-white md:max-w-2xl lg:max-w-4xl h-screen md:h-auto md:rounded-4xl lg:flex lg:flex-row-reverse items-center'>
+        <div>
+          <img className='w-full md:p-6 md:mt-4 rounded-t-[40px] lg:hidden' src={illustration} alt="illustration" />
+          <img className='hidden lg:block h-full p-8' src={illustrationDesktop} alt='illustration' />
         </div>
         <div className='p-6 text-blue-800'>
           <h1 className='text-preset1-mobile'>Stay updated!</h1>
