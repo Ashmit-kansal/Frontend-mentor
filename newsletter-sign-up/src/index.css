@@ -1,1 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
+
+
+@theme {
+  --font-roboto: "Roboto", sans-serif;
+
+  --color-white: #ffffff;
+  --color-grey: #949494;
+  --color-blue-800: #242742;
+  --color-blue-700: #36384d;
+  --color-red: #ff6155;
+  --color-gradient-left: #ff6a3a;
+  --color-gradient-right: #ff527b;
+}
+
+@layer components {
+  .text-preset1 {
+    @apply text-[56px]/[1.0] font-roboto font-bold tracking-normal;
+  }
+  .text-preset1-mobile{
+    @apply text-[40px]/[1.0] font-roboto font-bold tracking-normal;
+  }
+  .text-preset2-bold {
+    @apply text-[16px]/[1.5] font-roboto font-bold tracking-normal;
+  }
+  .text-preset2-regular {
+    @apply text-[16px]/[1.5] font-roboto font-normal tracking-normal;
+  }
+  .text-preset3 {
+    @apply text-[12px]/[1.5] font-roboto font-bold normal;
+  }
+}
