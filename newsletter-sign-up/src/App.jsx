@@ -1,10 +1,31 @@
-
+import illustration from './assets/images/illustration-sign-up-mobile.svg';
+import iconList from './assets/images/icon-list.svg';
 
 function App() {
 
   return (
     <>
-      
+      <main className='bg-blue-700'>
+        <div className='bg-white'>
+        <div >
+          <img className='w-full' src={illustration} alt="Logo" />
+        </div>
+        <div className='p-6 text-blue-800'>
+          <h1 className='text-preset1-mobile'>Stay updated!</h1>
+          <p className='text-preset2-regular my-5'>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul>
+            <li className='flex items-start gap-4 mb-2 text-preset2-regular'><img src={iconList} alt='list-icon' />Product discovery and building what matters</li>
+            <li className='flex items-start gap-4 mb-2 text-preset2-regular'><img src={iconList} alt='list-icon' />Measuring to ensure updates are a success</li>
+            <li className='flex items-start gap-4 mb-2 text-preset2-regular'><img src={iconList} alt='list-icon' />And much more!</li>
+          </ul>
+          <form className='mt-8'>
+            <label htmlFor="email" className='text-preset3'>Email address</label>
+            <input className='block w-full p-3 border border-grey rounded-lg my-2' type="email" placeholder="Enter your email address" required />
+            <button className='text-preset2-bold text-white bg-blue-800 w-full p-4 rounded-lg my-4' type="submit">Subscribe to monthly newsletter</button>
+          </form>
+        </div>
+        </div>
+      </main>
     </>
   )
 }

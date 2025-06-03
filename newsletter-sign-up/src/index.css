@@ -28,6 +28,6 @@
     @apply text-[16px]/[1.5] font-roboto font-normal tracking-normal;
   }
   .text-preset3 {
-    @apply text-[12px]/[1.5] font-roboto font-bold normal;
+    @apply text-[12px]/[1.5] font-roboto font-bold tracking-normal;
   }
 }
