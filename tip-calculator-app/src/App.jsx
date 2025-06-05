@@ -11,11 +11,11 @@ function App() {
         {/* container */}
         <div className="h-screen bg-grey-200 flex flex-col items-center gap-10">
           {/* logo */}
-          <div className="mt-10">
+          <div className="mt-10 lg:mt-20">
             <img src={logo} alt="logo-splitter" />
           </div>
           {/* calculator container */}
-          <div className="bg-white w-full rounded-2xl p-6">
+          <div className="bg-white w-full rounded-2xl p-6 md:max-w-xl md:px-14 md:py-8 lg:grid lg:max-w-4xl lg:grid-cols-2 lg:gap-8">
             {/* calculator */}
             <div>
               <p className="text-preset5 text-grey-500 my-2">Bill</p>
@@ -30,13 +30,15 @@ function App() {
                   className="text-preset3 text-green-900 text-right p-2 pr-4 w-full focus:outline-green-400"
                   type="number"
                   placeholder="0"
+                  min='1'
+                  step='0.01'
                 />
               </div>
               <p className="text-preset5 text-grey-500 mt-8 mb-2">
                 Select Tip %
               </p>
               {/* Tip percentage grid */}
-              <div className="grid grid-cols-2 gap-4 mb-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
                 <button className="bg-green-900 text-white rounded-lg p-1 text-preset3">
                   5%
                 </button>
@@ -56,6 +58,8 @@ function App() {
                   type="number"
                   placeholder="Custom"
                   className="bg-grey-50 text-grey-550 text-center rounded-lg p-1 text-preset3 focus:outline-green-400"
+                  min='1'
+                  step='0.01'
                 />
               </div>
               <p className="text-preset5 text-grey-500 my-2">
@@ -72,18 +76,19 @@ function App() {
                   className="text-preset3 text-green-900 text-right p-2 pr-4 w-full focus:outline-green-400"
                   type="number"
                   placeholder="0"
+                  min='1'                  
                 />
               </div>
             </div>
             {/* results */}
-            <div className="bg-green-900 rounded-xl p-5 mt-8">
+            <div className="bg-green-900 rounded-xl p-5 mt-8 md:p-10 lg:flex lg:flex-col">
               {/* tip amount per person */}
               <div className="flex justify-between">
                 <div>
                   <p className="text-preset5 text-white">Tip Amount</p>
                   <p className="text-preset6 text-grey-400">/ person</p>
                 </div>
-                <div className="flex items-center text-preset2 text-green-400">
+                <div className="flex items-center text-preset2 md:text-preset1 text-green-400">
                   <svg
                     width="11"
                     height="17"
@@ -116,7 +121,7 @@ function App() {
                 </div>
               </div>
               {/* reset button */}
-              <button className="bg-green-400 text-green-900 w-full p-2 rounded-lg text-preset4">RESET</button>
+              <button className="bg-green-400 text-green-900 w-full p-2 rounded-lg text-preset4 lg:mt-auto">RESET</button>
             </div>
           </div>
         </div>

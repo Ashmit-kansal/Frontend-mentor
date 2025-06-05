@@ -19,7 +19,7 @@
   --font-space-mono: 'Space Mono', monospace;
 }
 
-@layer utilities {
+@layer components {
   .text-preset1 {
     @apply text-[48px]/[71px] font-space-mono font-bold tracking-[-1px];
   }
@@ -38,4 +38,5 @@
   .text-preset6 {
     @apply text-[13px]/[19px] font-space-mono font-bold tracking-normal;
   }
+  
 }
