@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+
+
+@theme colors {
+  white: #ffffff;
+  black: #000000;
+
+  /* Grey */
+  grey-600: #3d6666;
+  grey-550: #547878;
+  grey-500: #5e7a7d;
+  grey-400: #7f9d9f;
+  grey-300: #9ebbbd;
+  grey-200: #c5e4e7;
+  grey-50:  #f3f9fa;
+
+  /* Green */
+  green-900: #00474b;
+  green-800: #085c61;
+  green-750: #0d686d;
+  green-400: #26c2ae;
+  green-200: #9fe8df;
+
+  /* Orange */
+  orange-400: #e17052;
+}
+
+@theme fonts {
+  space-mono: 'Space Mono', monospace;
+}
+
+@layer utilities {
+  .text-preset1 {
+    @apply text-[48px]/[71px] font-space-mono font-bold tracking-[-1px];
+  }
+  .text-preset2 {
+    @apply text-[32px]/[47px] font-space-mono font-bold tracking-[-0.67px];
+  }
+  .text-preset3 {
+    @apply text-[24px]/[36px] font-space-mono font-bold tracking-normal;
+  }
+  .text-preset4 {
+    @apply text-[20px]/[30px] font-space-mono font-bold tracking-normal;
+  }
+  .text-preset5 {
+    @apply text-[16px]/[24px] font-space-mono font-bold tracking-normal;
+  }
+  .text-preset6 {
+    @apply text-[13px]/[19px] font-space-mono font-bold tracking-normal;
+  }
+}
