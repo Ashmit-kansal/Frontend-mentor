@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @import "tailwindcss";
-
 
 @theme {
   --color-white: #ffffff;
@@ -22,26 +21,20 @@
   --font-rubik: "Rubik", sans-serif;
 }
 
-@layer components{
-  .text-preset1{
-    @apply text-[56px]/[66px] font-rubik font-light tracking-normal;
+@layer components {
+  .text-preset3 {
+    @apply text-[32px]/[38px] md:text-[56px]/[66px] font-rubik font-light tracking-normal;
   }
-  .text-preset2{
-    @apply text-[40px]/[47px] font-rubik font-light tracking-normal;
+  .text-preset4 {
+    @apply text-[24px]/[28px] md:text-[40px]/[47px] font-rubik font-light tracking-normal;
   }
-  .text-preset3{
-    @apply text-[32px]/[38px] font-rubik font-light tracking-normal;
-  }
-  .text-preset4{
-    @apply text-[24px]/[28px] font-rubik font-light tracking-normal;
-  }
-  .text-preset5-medium{
+  .text-preset5-medium {
     @apply text-[18px]/[21px] font-rubik font-medium tracking-normal;
   }
-  .text-preset5-regular{
+  .text-preset5-regular {
     @apply text-[18px]/[21px] font-rubik font-normal tracking-normal;
   }
-  .text-preset6{
+  .text-preset6 {
     @apply text-[15px]/[18px] font-rubik font-normal tracking-normal;
   }
 }
