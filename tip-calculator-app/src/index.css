@@ -2,32 +2,21 @@
 @import "tailwindcss";
 
 
-@theme colors {
-  white: #ffffff;
-  black: #000000;
-
-  /* Grey */
-  grey-600: #3d6666;
-  grey-550: #547878;
-  grey-500: #5e7a7d;
-  grey-400: #7f9d9f;
-  grey-300: #9ebbbd;
-  grey-200: #c5e4e7;
-  grey-50:  #f3f9fa;
-
-  /* Green */
-  green-900: #00474b;
-  green-800: #085c61;
-  green-750: #0d686d;
-  green-400: #26c2ae;
-  green-200: #9fe8df;
-
-  /* Orange */
-  orange-400: #e17052;
-}
-
-@theme fonts {
-  space-mono: 'Space Mono', monospace;
+@theme {
+  --color-grey-600: #3d6666;
+  --color-grey-550: #547878;
+  --color-grey-500: #5e7a7d;
+  --color-grey-400: #7f9d9f;
+  --color-grey-300: #9ebbbd;
+  --color-grey-200: #c5e4e7;
+  --color-grey-50:  #f3f9fa;
+  --color-green-900: #00474b;
+  --color-green-800: #085c61;
+  --color-green-750: #0d686d;
+  --color-green-400: #26c2ae;
+  --color-green-200: #9fe8df;
+  --color-orange-400: #e17052;
+  --font-space-mono: 'Space Mono', monospace;
 }
 
 @layer utilities {
