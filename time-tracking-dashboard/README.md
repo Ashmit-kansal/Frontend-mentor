@@ -1,12 +1,65 @@
-# React + Vite
+# Frontend Mentor - Time Tracking Dashboard Solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive time tracking dashboard built with **React**, **Vite**, and **Tailwind CSS**.  
+This project is a solution to the [Frontend Mentor Time Tracking Dashboard Challenge](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of contents
 
-## Expanding the ESLint configuration
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout for the dashboard depending on their device's screen size
+- Switch between daily, weekly, and monthly timeframes
+- See hover and focus states for all interactive elements
+- View time tracking cards with custom icons and background colors
+
+---
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox & CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/) - Build tool
+
+### What I learned
+
+- How to fetch and map JSON data in React
+- Using Tailwind CSS for rapid and responsive styling
+- Dynamically assigning icons and background colors to cards
+- Managing UI state for timeframe switching
+- Accessibility considerations for interactive elements
+
+#### Example code
+
+```jsx
+useEffect(() => {
+  fetch("/data.json")
+    .then((res) => res.json())
+    .then((json) => {
+      const modified = json.map((item, idx) => ({
+        ...item,
+        icon: icons[idx],
+        color: colors[idx],
+      }));
+      setData(modified);
+    });
+}, []);
