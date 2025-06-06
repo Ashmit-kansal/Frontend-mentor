@@ -1,12 +1,59 @@
-# React + Vite
+# Tip Calculator App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive tip calculator built with **React** and **Vite** for the [Frontend Mentor](https://www.frontendmentor.io/) challenge.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Enter bill amount, select or enter custom tip percentage, and specify number of people
+- Real-time calculation of tip and total per person
+- Responsive design for mobile and desktop
+- Accessible and keyboard-friendly
+- Custom styling with Tailwind CSS and custom utility classes
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+## Getting Started
+
+1. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+2. **Run the development server:**
+   ```sh
+   npm run dev
+   ```
+
+3. **Build for production:**
+   ```sh
+   npm run build
+   ```
+
+4. **Preview the production build:**
+   ```sh
+   npm run preview
+   ```
+
+## Folder Structure
+
+```
+src/
+  App.jsx           # Main React component
+  main.jsx          # Entry point
+  index.css         # Tailwind and custom styles
+  assets/
+    images/         # SVG icons and logo
+public/
+  vite.svg          # Vite logo
+```
+
+## Customization
+
+- **Colors and fonts** are defined in `src/index.css` using Tailwind and CSS variables.
+- **SVG icons** are used for dollar and person symbols.
+- **Custom text presets** are defined in `@layer components` in `index.css`.
+
