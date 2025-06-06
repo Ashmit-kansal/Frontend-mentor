@@ -105,10 +105,10 @@ function App() {
                   className="bg-grey-50 text-grey-550 text-center rounded-lg p-1 text-preset3 focus:outline-green-400"
                   min="1"
                   step="0.01"
-                  value={tipPercentage > 0 ? (tipPercentage / 100) : ""}
                   onChange={(e) =>
-                    setTipPercentage(parseFloat(e.target.value) * 100)
+                    setTipPercentage(parseFloat(e.target.value)/bill * 100)
                   }
+                  value={tipPercentage > 0 ? tipPercentage*bill / 100 : ""}
                 />
               </div>
               <div className="flex items-end justify-between">
