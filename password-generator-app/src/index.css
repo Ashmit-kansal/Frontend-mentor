@@ -48,3 +48,16 @@
     @apply text-[16px]/[20px] font-jetbrains-mono font-bold tracking-normal;
   }
 }
+
+@layer components{
+  .range-slider {
+    @apply w-full h-2 rounded-lg appearance-none cursor-pointer;
+    background-color: var(--color-grey-850);
+  }
+  .range-slider::-webkit-slider-thumb {
+    @apply w-5 h-5 rounded-full cursor-pointer;
+    appearance: none;
+    border: 2px solid var(--color-grey-200);
+    background-color: var(--color-grey-200);
+  }
+}
