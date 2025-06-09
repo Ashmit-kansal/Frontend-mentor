@@ -53,6 +53,16 @@
   .range-slider {
     @apply w-full h-2 rounded-lg appearance-none cursor-pointer;
     background-color: var(--color-grey-850);
+
+    /* implementing color for the slider track */
+    --progress: calc((var(--value, 0) - var(--min, 0)) / (var(--max, 100) - var(--min, 0)));
+    background: linear-gradient(
+      to right,
+      var(--color-green-200) 0%,
+      var(--color-green-200) calc(var(--progress) * 100%),
+      var(--color-grey-850) calc(var(--progress) * 100%),
+      var(--color-grey-850) 100%
+    );
   }
   .range-slider::-webkit-slider-thumb {
     @apply w-5 h-5 rounded-full cursor-pointer;
