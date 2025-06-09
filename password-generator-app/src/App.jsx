@@ -163,7 +163,7 @@ function App() {
               >
                 <p
                   className={`text-preset3 text-green-200 ${
-                    state.copied ? "" : "none"
+                    state.copied ? "" : "hidden"
                   }`}
                 >
                   COPIED
