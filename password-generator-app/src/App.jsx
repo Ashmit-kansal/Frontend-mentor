@@ -1,4 +1,4 @@
-import { useReducer, useRef } from "react";
+import { useReducer } from "react";
 
 const initialState = {
   length: 0,
@@ -163,7 +163,7 @@ function App() {
               >
                 <p
                   className={`text-preset3 text-green-200 ${
-                    state.copied ? "" : "hidden"
+                    state.copied ? "" : "none"
                   }`}
                 >
                   COPIED
