@@ -1,68 +1,109 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@theme {
+  /* White & Black */
+  --color-white: #FFFFFF;
+  --color-black: #000000;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  /* Grey */
+  --color-grey-500: #626C7F;
+  --color-grey-50: #F4F6FA;
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+  /* Blue */
+  --color-blue-950: #2D3949;
+  --color-blue-900: #313E51;
+  --color-blue-850: #3B4D66;
+  --color-blue-500: #306AFF;
+  --color-blue-300: #ABC1E1;
+  --color-blue-100: #EDF1F9;
+  --color-blue-50:  #EBF0FF;
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+  /* Green */
+  --color-green-500: #2FD887;
+  --color-green-100: #E0FDEF;
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+  /* Purple */
+  --color-purple-600: #A729F5;
+  --color-purple-100: #F6E7FF;
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  /* Orange */
+  --color-orange-400: #FF7E35;
+  --color-orange-50:  #FFF5ED;
+
+  /* Red */
+  --color-red-500: #EE5454;
+
+  /* Fonts */
+  --font-rubik: "Rubik", sans-serif;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@layer components {
+  /* Text Preset 1 */
+  .text-preset1 {
+    @apply text-[88px]/[1] font-rubik font-medium tracking-normal;
   }
-  a:hover {
-    color: #747bff;
+  @screen md {
+    .text-preset1 {
+      @apply text-[144px]/[1];
+    }
   }
-  button {
-    background-color: #f9f9f9;
+
+  /* Text Preset 2 (Medium) */
+  .text-preset2-md {
+    @apply text-[40px]/[1] font-rubik font-medium tracking-normal;
+  }
+  @screen md {
+    .text-preset2-md {
+      @apply text-[64px]/[1];
+    }
+  }
+  /* Text Preset 2 (Light) */
+  .text-preset2-light {
+    @apply text-[40px]/[1] font-rubik font-light tracking-normal;
+  }
+  @screen md {
+    .text-preset2-light {
+      @apply text-[64px]/[1];
+    }
+  }
+
+  /* Text Preset 3 */
+  .text-preset3 {
+    @apply text-[20px]/[1.2] font-rubik font-medium tracking-normal;
+  }
+  @screen md {
+    .text-preset3 {
+      @apply text-[36px]/[1.2];
+    }
+  }
+
+  /* Text Preset 4 */
+  .text-preset4 {
+    @apply text-[18px]/[1] font-rubik font-medium tracking-normal;
+  }
+  @screen md {
+    .text-preset4 {
+      @apply text-[28px]/[1];
+    }
+  }
+
+  /* Text Preset 5 (Medium) */
+  .text-preset5-md {
+    @apply text-[24px]/[1.5] font-rubik font-medium tracking-normal;
+  }
+  /* Text Preset 5 (Regular) */
+  .text-preset5-regular {
+    @apply text-[24px]/[1.5] font-rubik font-normal tracking-normal;
+  }
+
+  /* Text Preset 6 */
+  .text-preset6 {
+    @apply text-[14px]/[1.5] font-rubik italic tracking-normal;
+  }
+  @screen md {
+    .text-preset6 {
+      @apply text-[20px]/[1.5];
+    }
   }
 }
