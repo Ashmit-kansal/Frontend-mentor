@@ -1,6 +1,6 @@
 function Question() {
   return (
-    <div>
+    <div className="hidden">
       {/* this div is for showing the question */}
       <div>
         <div>

@@ -1,7 +1,7 @@
 
 function Result() {
   return (
-    <div>
+    <div className="hidden">
         <div>
             <h1>Quiz Completed!</h1>
             <h1>You scored...</h1>
