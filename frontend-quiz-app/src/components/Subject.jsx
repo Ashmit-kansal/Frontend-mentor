@@ -8,8 +8,8 @@ function Subject() {
   return (
     <div
       className={`${
-        subject == "" ? "" : "hidden"
-      } lg:flex justify-center gap-20 lg:mt-20`}
+        subject == "" ? " lg:flex" : "hidden"
+      } justify-center gap-20 lg:mt-20`}
     >
       {/* this div is for welcoming the participant */}
       <div className="lg:w-full">
