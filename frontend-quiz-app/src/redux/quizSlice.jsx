@@ -1,10 +1,21 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+
+export const fetchQuestions = createAsyncThunk(
+  "quiz/fetchQuestions",
+  async (number) => {
+    const response = await fetch(`data.json`);
+    const data = await response.json();
+    return data.quizzes[number].questions;
+  }
+);
 
 const initialState = {
   theme: "light",
   subject: "",
   subjectImage: "",
   questions: [],
+  status: "idle", // 'idle' | 'loading' | 'succeeded' | 'failed'
+  error: null,
   currentQuestionIndex: 0,
   score: 0,
   isAnswer: "",
@@ -103,9 +114,6 @@ const quizSlice = createSlice({
           state.subjectImage = "";
       }
     },
-    setQuestions: (state, action) => {
-      state.questions = action.payload;
-    },
     nextQuestion: (state) => {
       if (state.currentQuestionIndex < state.questions.length - 1) {
         state.currentQuestionIndex += 1;
@@ -120,6 +128,20 @@ const quizSlice = createSlice({
       state.isAnswer = action.payload;
     },
     resetQuiz: () => initialState,
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchQuestions.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(fetchQuestions.fulfilled, (state, action) => {
+        state.status = "succeeded";
+        state.questions = action.payload;
+      })
+      .addCase(fetchQuestions.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = action.error.message;
+      });
   },
 });
 

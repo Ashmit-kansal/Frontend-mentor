@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { setSubject, setSubjectImage } from "../redux/quizSlice";
+import { setSubject, setSubjectImage, fetchQuestions } from "../redux/quizSlice";
 
 function Subject() {
   const dispatch = useDispatch();
@@ -44,6 +44,7 @@ function Subject() {
           onClick={() => {
             dispatch(setSubject("HTML"));
             dispatch(setSubjectImage("html"));
+            dispatch(fetchQuestions(0));
           }}
         >
           <div className="bg-orange-50 p-1 rounded-lg">
@@ -76,6 +77,7 @@ function Subject() {
           onClick={() => {
             dispatch(setSubject("CSS"));
             dispatch(setSubjectImage("css"));
+            dispatch(fetchQuestions(1));
           }}
         >
           <div className="bg-green-100 p-1 rounded-lg">
@@ -108,6 +110,7 @@ function Subject() {
           onClick={() => {
             dispatch(setSubject("Javascript"));
             dispatch(setSubjectImage("javascript"));
+            dispatch(fetchQuestions(2));
           }}
         >
           <div className="bg-blue-50 p-1 rounded-lg">
@@ -140,6 +143,7 @@ function Subject() {
           onClick={() => {
             dispatch(setSubject("Accessibility"));
             dispatch(setSubjectImage("accessibility"));
+            dispatch(fetchQuestions(3));
           }}
         >
           <div className="bg-purple-100 p-1 rounded-lg">
