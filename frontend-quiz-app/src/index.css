@@ -1,38 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @import "tailwindcss";
 
 @theme {
   /* White & Black */
-  --color-white: #FFFFFF;
+  --color-white: #ffffff;
   --color-black: #000000;
 
   /* Grey */
-  --color-grey-500: #626C7F;
-  --color-grey-50: #F4F6FA;
+  --color-grey-500: #626c7f;
+  --color-grey-50: #f4f6fa;
 
   /* Blue */
-  --color-blue-950: #2D3949;
-  --color-blue-900: #313E51;
-  --color-blue-850: #3B4D66;
-  --color-blue-500: #306AFF;
-  --color-blue-300: #ABC1E1;
-  --color-blue-100: #EDF1F9;
-  --color-blue-50:  #EBF0FF;
+  --color-blue-950: #2d3949;
+  --color-blue-900: #313e51;
+  --color-blue-850: #3b4d66;
+  --color-blue-500: #306aff;
+  --color-blue-300: #abc1e1;
+  --color-blue-100: #edf1f9;
+  --color-blue-50: #ebf0ff;
 
   /* Green */
-  --color-green-500: #2FD887;
-  --color-green-100: #E0FDEF;
+  --color-green-500: #2fd887;
+  --color-green-100: #e0fdef;
 
   /* Purple */
-  --color-purple-600: #A729F5;
-  --color-purple-100: #F6E7FF;
+  --color-purple-600: #a729f5;
+  --color-purple-100: #f6e7ff;
 
   /* Orange */
-  --color-orange-400: #FF7E35;
-  --color-orange-50:  #FFF5ED;
+  --color-orange-400: #ff7e35;
+  --color-orange-50: #fff5ed;
 
   /* Red */
-  --color-red-500: #EE5454;
+  --color-red-500: #ee5454;
 
   /* Fonts */
   --font-rubik: "Rubik", sans-serif;
@@ -43,49 +43,25 @@
   .text-preset1 {
     @apply text-[88px]/[1] font-rubik font-medium tracking-normal;
   }
-  @screen md {
-    .text-preset1 {
-      @apply text-[144px]/[1];
-    }
-  }
 
   /* Text Preset 2 (Medium) */
   .text-preset2-md {
     @apply text-[40px]/[1] font-rubik font-medium tracking-normal;
   }
-  @screen md {
-    .text-preset2-md {
-      @apply text-[64px]/[1];
-    }
-  }
+
   /* Text Preset 2 (Light) */
   .text-preset2-light {
     @apply text-[40px]/[1] font-rubik font-light tracking-normal;
-  }
-  @screen md {
-    .text-preset2-light {
-      @apply text-[64px]/[1];
-    }
   }
 
   /* Text Preset 3 */
   .text-preset3 {
     @apply text-[20px]/[1.2] font-rubik font-medium tracking-normal;
   }
-  @screen md {
-    .text-preset3 {
-      @apply text-[36px]/[1.2];
-    }
-  }
 
   /* Text Preset 4 */
   .text-preset4 {
     @apply text-[18px]/[1] font-rubik font-medium tracking-normal;
-  }
-  @screen md {
-    .text-preset4 {
-      @apply text-[28px]/[1];
-    }
   }
 
   /* Text Preset 5 (Medium) */
@@ -100,10 +76,5 @@
   /* Text Preset 6 */
   .text-preset6 {
     @apply text-[14px]/[1.5] font-rubik italic tracking-normal;
-  }
-  @screen md {
-    .text-preset6 {
-      @apply text-[20px]/[1.5];
-    }
   }
 }
