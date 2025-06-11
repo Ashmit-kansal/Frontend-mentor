@@ -13,7 +13,7 @@ function App() {
         <div>
           <Background />
         </div>
-        <div className="relative z-10">
+        <div className="relative z-10 pt-5 px-5 md:pt-10 lg:pt-16">
           <Header />
         <Subject />
         <Question />

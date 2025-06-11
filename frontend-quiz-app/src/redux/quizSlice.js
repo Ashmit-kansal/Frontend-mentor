@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   theme: "light",
   subject: "",
+  subjectImage: "",
   questions: [],
   currentQuestionIndex: 0,
   score: 0,
@@ -14,11 +15,14 @@ const quizSlice = createSlice({
   name: "quiz",
   initialState,
   reducers: {
-    setTheme: (state, action) => {
-      state.theme = action.payload;
+    toggleTheme: (state) => {
+      state.theme = state.theme === "light" ? "dark" : "light";
     },
     setSubject: (state, action) => {
       state.subject = action.payload;
+    },
+    setSubjectImage: (state, action) => {
+      state.subjectImage = action.payload;
     },
     setQuestions: (state, action) => {
       state.questions = action.payload;
@@ -41,8 +45,9 @@ const quizSlice = createSlice({
 });
 
 export const {
-  setTheme,
+  toggleTheme,
   setSubject,
+  setSubjectImage,
   setQuestions,
   nextQuestion,
   setScore,
