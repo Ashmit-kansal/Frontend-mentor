@@ -1,12 +1,73 @@
-# React + Vite
+# Interactive Rating Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive interactive rating component built with **React**, **Tailwind CSS**, and **Vite**.  
+Inspired by the Frontend Mentor challenge, this project allows users to select a rating (1-5) and submit feedback with a modern, accessible UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Select a rating from 1 to 5
+- Responsive and accessible design
+- Custom SVG icons and illustrations
+- Styled with Tailwind CSS and custom design tokens
+- Built with React functional components and hooks
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Tech Stack
+
+- [React](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+
+---
+
+## Getting Started
+
+### 1. Install dependencies
+
+```bash
+npm install
+```
+
+### 2. Start the development server
+
+```bash
+npm run dev
+```
+
+### 3. Build for production
+
+```bash
+npm run build
+```
+
+---
+
+## Project Structure
+
+```
+interactive-rating-component/
+├── public/
+│   └── images/                  # SVGs and illustrations
+├── src/
+│   ├── assets/                  # Additional assets
+│   ├── App.jsx                  # Main component
+│   ├── index.css                # Tailwind and custom styles
+│   └── main.jsx                 # Entry point
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+---
+
+## Customization
+
+- **Colors & Fonts:**  
+  Edit `src/index.css` to adjust Tailwind config or custom CSS variables.
+- **SVGs & Illustrations:**  
+  Replace or update SVGs in `src/assets/images/` as needed.
+
+---
