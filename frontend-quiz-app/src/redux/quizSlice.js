@@ -38,8 +38,8 @@ const quizSlice = createSlice({
         state.isQuizCompleted = true;
       }
     },
-    setScore: (state, action) => {
-      state.score += action.payload;
+    setScore: (state) => {
+      state.score += 1;
     },
     setIsAnswer: (state, action) => {
       state.isAnswer = action.payload;
