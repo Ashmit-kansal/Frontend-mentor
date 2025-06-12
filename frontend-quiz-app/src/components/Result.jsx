@@ -10,7 +10,7 @@ function Result() {
 
   return (
     <div
-      className={`mt-15 lg:mt-20 ${
+      className={`mt-15 ${
         isQuizCompleted ? "block lg:flex lg:gap-20" : "hidden"
       }`}
     >

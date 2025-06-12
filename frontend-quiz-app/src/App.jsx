@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <div className={`h-screen relative ${theme === "light" ? "bg-grey-50" : "bg-blue-900"}`}>
+      <div className={`min-h-screen relative ${theme === "light" ? "bg-grey-50" : "bg-blue-900"}`}>
         <div>
           <Background />
         </div>

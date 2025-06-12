@@ -38,7 +38,7 @@ function Subject() {
       {/* this div will show the list of subjects */}
       <div className="mt-10 flex flex-col gap-4 lg:w-full">
         <div
-          className={`flex gap-4 p-3 rounded-lg items-center ${
+          className={`flex gap-4 p-3 lg:p-6 rounded-lg items-center ${
             theme == "light" ? "bg-white" : "bg-blue-850"
           }`}
           onClick={() => {
@@ -70,7 +70,7 @@ function Subject() {
           </div>
         </div>
         <div
-          className={`flex gap-4 p-3 rounded-lg items-center ${
+          className={`flex gap-4 p-3 lg:p-6 rounded-lg items-center ${
             theme == "light" ? "bg-white" : "bg-blue-850"
           }`}
           onClick={() => {
@@ -102,7 +102,7 @@ function Subject() {
           </div>
         </div>
         <div
-          className={`flex gap-4 p-3 rounded-lg items-center ${
+          className={`flex gap-4 p-3 lg:p-6 rounded-lg items-center ${
             theme == "light" ? "bg-white" : "bg-blue-850"
           }`}
           onClick={() => {
@@ -134,7 +134,7 @@ function Subject() {
           </div>
         </div>
         <div
-          className={`flex gap-4 p-3 rounded-lg items-center ${
+          className={`flex gap-4 p-3 lg:p-6 rounded-lg items-center ${
             theme == "light" ? "bg-white" : "bg-blue-850"
           }`}
           onClick={() => {
