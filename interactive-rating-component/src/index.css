@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Grey */
+  --color-grey-950: #131518;
+  --color-grey-900: #262e38;
+  --color-grey-500: #969fad;
+
+  /* Orange */
+  --color-orange-500: #fc7614;
+
+  /* Gradient */
+  --color-gradient-1-from: #232a34;
+  --color-gradient-1-to: #181e27;
+
+  /* Fonts */
+  --font-overpass: "Overpass", sans-serif;
+}
+
+@layer components {
+  @layer components {
+    .text-preset1 {
+      @apply font-overpass font-bold text-[28px] leading-[35px] tracking-[0px];
+    }
+    .text-preset2 {
+      @apply font-overpass font-bold text-[24px] leading-[30px] tracking-[0px];
+    }
+    .text-preset3 {
+      @apply font-overpass font-bold text-[16px] leading-[24px] tracking-[0.2px];
+    }
+    .text-preset4-bold {
+      @apply font-overpass font-bold text-[15px] leading-[19px] tracking-[2px];
+    }
+    .text-preset4 {
+      @apply font-overpass font-normal text-[15px] leading-[24px] tracking-[0px];
+    }
+    .text-preset5-bold {
+      @apply font-overpass font-bold text-[14px] leading-[18px] tracking-[1.87px];
+    }
+    .text-preset5-semibold {
+      @apply font-overpass font-semibold text-[14px] leading-[24px] tracking-[0.17px];
+    }
+    .text-preset5 {
+      @apply font-overpass font-normal text-[14px] leading-[22px] tracking-[0px];
+    }
+  }
+}
