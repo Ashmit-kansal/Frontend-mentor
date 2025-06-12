@@ -1,10 +1,16 @@
+import { useSelector, useDispatch } from "react-redux"
+import { resetQuiz } from "../redux/quizSlice"
 
 function Result() {
+
+    const {theme, score, questions, isQuizCompleted } = useSelector((state) => state.quiz);
+    const dispatch = useDispatch();
+
   return (
-    <div className="hidden">
+    <div className={`${isQuizCompleted ? "block lg:flex" : "hidden"}`}>
         <div>
-            <h1>Quiz Completed!</h1>
-            <h1>You scored...</h1>
+            <h1 className={`text-preset2-light md:text-[64px] ${theme == "light"?"text-blue-900":""}`}>Quiz Completed</h1>
+            <h1 className={`text-preset2-md md:text-[64px]`}>You scored...</h1>
         </div>
         <div>
             <div>

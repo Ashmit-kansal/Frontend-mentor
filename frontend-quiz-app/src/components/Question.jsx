@@ -28,19 +28,19 @@ function Question() {
 
   return (
     <div
-      className={`lg:flex gap-20 ${
-        subject === "" || isQuizCompleted ? "hidden" : "block"
+      className={`${
+        subject === "" || isQuizCompleted ? "hidden" : "lg:flex gap-20 "
       }`}
     >
       {/* this div is for showing the question */}
-      <div>
+      <div className="lg:w-full">
         <div>
           <h1
             className={`text-preset6 md:text-[20px] mt-15 ${
               theme == "light" ? "text-grey-500" : "text-blue-300"
             }`}
           >
-            Question {currentQuestionIndex} of {questions.length}
+            Question {currentQuestionIndex + 1} of {questions.length}
           </h1>
           <h2
             className={`text-preset3 md:text-[36px] my-5 ${
