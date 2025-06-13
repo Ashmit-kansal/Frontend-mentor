@@ -22,30 +22,28 @@
 }
 
 @layer components {
-  @layer components {
-    .text-preset1 {
-      @apply font-overpass font-bold text-[28px] leading-[35px] tracking-[0px];
-    }
-    .text-preset2 {
-      @apply font-overpass font-bold text-[24px] leading-[30px] tracking-[0px];
-    }
-    .text-preset3 {
-      @apply font-overpass font-bold text-[16px] leading-[24px] tracking-[0.2px];
-    }
-    .text-preset4-bold {
-      @apply font-overpass font-bold text-[15px] leading-[19px] tracking-[2px];
-    }
-    .text-preset4 {
-      @apply font-overpass font-normal text-[15px] leading-[24px] tracking-[0px];
-    }
-    .text-preset5-bold {
-      @apply font-overpass font-bold text-[14px] leading-[18px] tracking-[1.87px];
-    }
-    .text-preset5-semibold {
-      @apply font-overpass font-semibold text-[14px] leading-[24px] tracking-[0.17px];
-    }
-    .text-preset5 {
-      @apply font-overpass font-normal text-[14px] leading-[22px] tracking-[0px];
-    }
+  .text-preset1 {
+    @apply font-overpass font-bold text-[28px] leading-[35px] tracking-[0px];
+  }
+  .text-preset2 {
+    @apply font-overpass font-bold text-[24px] leading-[30px] tracking-[0px];
+  }
+  .text-preset3 {
+    @apply font-overpass font-bold text-[16px] leading-[24px] tracking-[0.2px];
+  }
+  .text-preset4-bold {
+    @apply font-overpass font-bold text-[15px] leading-[19px] tracking-[2px];
+  }
+  .text-preset4 {
+    @apply font-overpass font-normal text-[15px] leading-[24px] tracking-[0px];
+  }
+  .text-preset5-bold {
+    @apply font-overpass font-bold text-[14px] leading-[18px] tracking-[1.87px];
+  }
+  .text-preset5-semibold {
+    @apply font-overpass font-semibold text-[14px] leading-[24px] tracking-[0.17px];
+  }
+  .text-preset5 {
+    @apply font-overpass font-normal text-[14px] leading-[22px] tracking-[0px];
   }
 }
