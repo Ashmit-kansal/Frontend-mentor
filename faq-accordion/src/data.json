@@ -1,0 +1,21 @@
+
+{
+    "faqs": [
+        {
+        "question": "What is the purpose of this FAQ?",
+        "answer": "This FAQ provides answers to common questions about the accordion component."
+        },
+        {
+        "question": "How do I use the accordion?",
+        "answer": "You can use the accordion by importing it into your project and following the usage instructions provided in the documentation."
+        },
+        {
+        "question": "Can I customize the styles of the accordion?",
+        "answer": "Yes, you can customize the styles using CSS or by passing style props to the component."
+        },
+        {
+        "question": "Is the accordion accessible?",
+        "answer": "Yes, the accordion is designed with accessibility in mind and follows best practices for keyboard navigation and screen readers."
+        }
+    ]
+}
