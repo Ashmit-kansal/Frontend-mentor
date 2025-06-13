@@ -16,7 +16,7 @@ function FaqItem({ faq, index, activeIndex, toggleFaq, faqsL }) {
   return (
     <div>
       <div className="flex items-center justify-between">
-        <h2 className="text-preset2 md:text-[18px]">{faq.question}</h2>
+        <h2 className="text-preset2 md:text-[18px] text-purple-950 hover:text-violet-600">{faq.question}</h2>
         <button
           className="cursor-pointer"
           onClick={() => toggleFaq(index)}
