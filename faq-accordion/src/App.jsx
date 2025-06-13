@@ -1,5 +1,6 @@
 import data from './data.json'
 import { useState } from 'react';
+import FaqItem from './FaqItem';
 
 function App() {
 
@@ -20,22 +21,7 @@ function App() {
               <h1 className='text-preset1 md:text-[56px]/[66px]'>FAQs</h1>
             </div>
             {faqs.map((faq, index) => (
-              <div key={index} className="faq-item">
-                <div className='flex items-center justify-between'>
-                  <h2 className='text-preset2 md:text-[18px]'>{faq.question}</h2>
-                  <button className='cursor-pointer' onClick={() => toggleFaq(index)} aria-label="Toggle FAQ">
-                    {activeIndex === index ? (
-                      <svg className='w-[25px] h-[25px] min-w-fit' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 31"><path fill="#301534" d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z"/></svg>
-                    ) : (
-                      <svg className='w-[25px] h-[25px] min-w-fit' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 31"><path fill="#AD28EB" d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z"/></svg>
-                    )}
-                  </button>
-                </div>
-                {activeIndex === index && (
-                  <p className='text-purple-600 text-preset3 md:text-[14px] mt-5 transition-discrete duration-700 ease-in'>{faq.answer}</p>
-                )}
-                {index !== faqs.length - 1 && <hr className='text-purple-100 border-t-2 my-5' />}
-              </div>
+              <FaqItem faq={faq} index={index} activeIndex={activeIndex} toggleFaq={toggleFaq} faqsL={faqs.length} />
             ))}
           </div>
       </main>
