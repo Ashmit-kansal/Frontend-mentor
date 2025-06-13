@@ -1,12 +1,78 @@
-# React + Vite
+# FAQ Accordion
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive FAQ accordion component built with **React**, **Tailwind CSS**, and **Vite**.  
+Inspired by Frontend Mentor challenges, this project allows users to expand and collapse answers to frequently asked questions in a modern, accessible UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Expand/collapse FAQ items with smooth transitions
+- Responsive and accessible design
+- Custom SVG icons and illustrations
+- Styled with Tailwind CSS and custom design tokens
+- Built with React functional components and hooks
+- Data-driven: FAQs loaded from a JSON file
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Tech Stack
+
+- [React](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+
+---
+
+## Getting Started
+
+### 1. Install dependencies
+
+```bash
+npm install
+```
+
+### 2. Start the development server
+
+```bash
+npm run dev
+```
+
+### 3. Build for production
+
+```bash
+npm run build
+```
+
+---
+
+## Project Structure
+
+```
+faq-accordion/
+├── public/
+│   └── images/                  # SVGs and illustrations
+├── src/
+│   ├── assets/                  # Additional assets
+│   ├── App.jsx                  # Main component
+│   ├── FaqItem.jsx              # FAQ item component
+│   ├── data.json                # FAQ data
+│   ├── index.css                # Tailwind and custom styles
+│   └── main.jsx                 # Entry point
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+---
+
+## Customization
+
+- **Colors & Fonts:**  
+  Edit `src/index.css` to adjust Tailwind config or custom CSS variables.
+- **FAQ Data:**  
+  Update `src/data.json` to change the questions and answers.
+- **SVGs & Illustrations:**  
+  Replace or update SVGs in `src/assets/images/` as needed.
+
+---
