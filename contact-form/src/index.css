@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import "tailwindcss";
 
-
 @theme {
   /* Grey */
   --color-grey-900: #2A4144;
@@ -19,4 +18,46 @@
 
   /* Font */
   --font-karla: "Karla", sans-serif;
+}
+
+/* Typography Utility Classes */
+
+/* Heading: 32px, Bold, 100% line height, -1px letter spacing */
+.heading {
+  font-family: var(--font-karla);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: var(--color-grey-900);
+}
+
+/* Body MD Bold: 18px, Bold, 150% line height, 0px letter spacing */
+.body-md-bold {
+  font-family: var(--font-karla);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--color-green-600);
+}
+
+/* Body MD Regular: 18px, Regular, 150% line height, 0px letter spacing */
+.body-md {
+  font-family: var(--font-karla);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--color-grey-900);
+}
+
+/* Body SM: 16px, Regular, 150% line height, 0px letter spacing */
+.body-sm {
+  font-family: var(--font-karla);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--color-grey-900);
 }
