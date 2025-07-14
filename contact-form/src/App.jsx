@@ -2,10 +2,30 @@ import { useState } from "react";
 
 function App() {
   const [queryType, setQueryType] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setShowAlert(true);
+    setTimeout(() => setShowAlert(false), 40000); // Hide after 2 seconds
+    e.target.reset();
+    setQueryType("");
+  };
 
   return (
     <>
-      <form className="bg-green-200 p-4 min-h-screen flex items-center justify-center body-sm">
+      {showAlert && (
+        <div className="fixed top-6 left-1/2 -translate-x-1/2 bg-grey-900 text-white px-6 py-3 rounded-md z-50">
+          <p className="body-md-bold text-white">✅ Message Sent!</p>
+          <p className="text-white body-sm">
+            Thanks for completing the form. We'll be in touch soon!
+          </p>
+        </div>
+      )}
+      <form
+        className="bg-green-200 text-grey-900 p-4 min-h-screen flex items-center justify-center body-sm"
+        onSubmit={handleSubmit}
+      >
         <div className="bg-white rounded-2xl p-6 w-full max-w-md mx-auto">
           <h1 className="heading mb-6">Contact Us</h1>
           <div className="md:flex md:justify-between md:gap-3">
