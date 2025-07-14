@@ -1,12 +1,31 @@
-# React + Vite
+# Contact Form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, accessible contact form built with **React** and **Tailwind CSS**.  
+This project demonstrates custom form validation, responsive design, and user feedback with a success alert.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Custom validation:** Shows error messages for empty fields.
+- **Success alert:** Displays a confirmation message when the form is submitted successfully.
+- **Responsive design:** Works well on all screen sizes.
+- **Accessible:** Semantic HTML, proper labels, and keyboard navigation.
+- **Styled with Tailwind CSS:** Uses custom color and typography tokens.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Folder Structure
+contact-form/
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── [App.jsx](http://_vscodecontentref_/0)
+│   ├── [index.css](http://_vscodecontentref_/1)
+│   ├── [main.jsx](http://_vscodecontentref_/2)
+│   └── assets/
+│       └── react.svg
+├── [index.html](http://_vscodecontentref_/3)
+├── [package.json](http://_vscodecontentref_/4)
+├── [vite.config.js](http://_vscodecontentref_/5)
+└── [README.md](http://_vscodecontentref_/6)
