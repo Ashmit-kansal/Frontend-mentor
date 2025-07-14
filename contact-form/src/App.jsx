@@ -3,11 +3,41 @@ import { useState } from "react";
 function App() {
   const [queryType, setQueryType] = useState("");
   const [showAlert, setShowAlert] = useState(false);
+  const [values, setValues] = useState({
+    first: "initial",
+    last: "initial",
+    email: "initial",
+    queryType: "initial",
+    message: "initial",
+    consent: "initial",
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+    setValues({
+      first: data.firstName,
+      last: data.lastName,
+      email: data.email,
+      queryType: data.queryType,
+      message: data.message,
+      consent: data.consent,
+    });
+
+    if (
+      !data.firstName?.trim() ||
+      !data.lastName?.trim() ||
+      !data.email?.trim() ||
+      !data.message?.trim() ||
+      !data.consent ||
+      !queryType
+    ) {
+      return;
+    }
+
     setShowAlert(true);
-    setTimeout(() => setShowAlert(false), 40000); // Hide after 2 seconds
+    setTimeout(() => setShowAlert(false), 4000); // Hide after 2 seconds
     e.target.reset();
     setQueryType("");
   };
@@ -25,6 +55,7 @@ function App() {
       <form
         className="bg-green-200 text-grey-900 p-4 min-h-screen flex items-center justify-center body-sm"
         onSubmit={handleSubmit}
+        noValidate
       >
         <div className="bg-white rounded-2xl p-6 w-full max-w-md mx-auto">
           <h1 className="heading mb-6">Contact Us</h1>
@@ -37,9 +68,14 @@ function App() {
                 id="firstName"
                 name="firstName"
                 type="text"
-                className="w-full outline outline-grey-500 rounded-md p-2 focus:outline-green-600 hover:outline-green-600"
+                className={`w-full outline ${
+                  values.first ? "outline-grey-500" : "outline-red-error"
+                } rounded-md p-2 focus:outline-green-600 hover:outline-green-600`}
                 required
               />
+              {!values.first && (
+                <p className="text-red-error body-sm">First name is required</p>
+              )}
             </div>
             <div className="mb-4 w-full">
               <label className="block mb-1" htmlFor="lastName">
@@ -49,9 +85,14 @@ function App() {
                 id="lastName"
                 name="lastName"
                 type="text"
-                className="w-full outline outline-grey-500 rounded-md p-2 focus:outline-green-600 hover:outline-green-600"
+                className={`w-full outline ${
+                  values.first ? "outline-grey-500" : "outline-red-error"
+                } rounded-md p-2 focus:outline-green-600 hover:outline-green-600`}
                 required
               />
+              {!values.last && (
+                <p className="text-red-error body-sm">Last name is required</p>
+              )}
             </div>
           </div>
           <div className="mb-4">
@@ -62,9 +103,14 @@ function App() {
               id="email"
               name="email"
               type="email"
-              className="w-full outline outline-grey-500 rounded-md p-2 focus:outline-green-600 hover:outline-green-600"
+              className={`w-full outline ${
+                values.first ? "outline-grey-500" : "outline-red-error"
+              } rounded-md p-2 focus:outline-green-600 hover:outline-green-600`}
               required
             />
+            {!values.email && (
+              <p className="text-red-error body-sm">Email is required</p>
+            )}
           </div>
           <fieldset className=" md:flex md:justify-between md:gap-3">
             <legend className="block mb-1">
@@ -104,6 +150,11 @@ function App() {
               </label>
             </div>
           </fieldset>
+          {!values.queryType && (
+            <p className="text-red-error body-sm mb-4">
+              Please select a query type
+            </p>
+          )}
           <div className="mb-4">
             <label className="block mb-1" htmlFor="message">
               Message <span className="text-green-600">*</span>
@@ -111,9 +162,14 @@ function App() {
             <textarea
               id="message"
               name="message"
-              className="w-full outline outline-grey-500 rounded-md p-2 focus:outline-green-600 h-32 hover:outline-green-600"
+              className={`w-full outline ${
+                values.first ? "outline-grey-500" : "outline-red-error"
+              } rounded-md p-2 focus:outline-green-600 hover:outline-green-600 h-36`}
               required
             />
+            {!values.message && (
+              <p className="text-red-error body-sm">Message is required</p>
+            )}
           </div>
           <div className="mb-6 flex items-start">
             <input
@@ -128,6 +184,9 @@ function App() {
               <span className="text-green-600">*</span>
             </label>
           </div>
+          {!values.consent && (
+            <p className="text-red-error body-sm mb-4">Consent is required</p>
+          )}
           <button
             type="submit"
             className="w-full bg-green-600 text-white font-bold py-4 rounded-md hover:bg-grey-900"
